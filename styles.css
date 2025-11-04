@@ -1,0 +1,148 @@
+/* УСТАНОВКА ШРИФТОВ И СБРОС СТИЛЕЙ */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif; /* Красивый шрифт для праздника */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #333; /* Темный текст */
+}
+
+/* 1. ФОНОВЫЕ ДЕКОРАЦИИ */
+body {
+    /* !!! МЕСТО ДЛЯ ФОНОВОГО ИЗОБРАЖЕНИЯ !!! */
+    background-image: url('путь/к/праздничному-фону.jpg'); /* Замените на путь */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    /* Дополнительный декоративный градиент поверх картинки */
+    background-color: #ffe0e0; /* Светло-розовый цвет, если картинка не загрузится */
+}
+
+/* 2. ВЕРХНИЙ БАР (ШАПКА) */
+.header-bar {
+    width: 100%;
+    /* Градиентный фон для праздничности */
+    background: linear-gradient(to right, #ff7e5f, #feb47b); 
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    position: relative; /* Для позиционирования внутренних декораций */
+    z-index: 10;
+}
+
+.main-title {
+    margin: 0;
+    font-size: 3em;
+    /* Яркая неоновая тень */
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff; 
+    letter-spacing: 2px;
+}
+
+/* 3. ДЕКОРАТИВНЫЕ ЭЛЕМЕНТЫ В ШАПКЕ/ПОДВАЛЕ */
+.decoration {
+    position: absolute;
+    height: 10px;
+    width: 100%;
+}
+
+.garland-top {
+    top: 0;
+    /* Декоративный повторяющийся узор */
+    background: repeating-linear-gradient(45deg,
+        #f00, 10px,
+        #ffc72c 10px, 20px,
+        #00f 20px, 30px);
+}
+
+.stars {
+    bottom: 0;
+    height: 5px;
+    /* Простой повторяющийся узор из звездочек (имитация) */
+    background: radial-gradient(circle, white 2px, transparent 2px) 0 0 / 10px 10px,
+                linear-gradient(to right, rgba(255, 255, 255, 0.5), transparent);
+}
+
+.garland-bottom {
+    top: 0;
+    height: 100%;
+    /* Более сложный градиент */
+    background: linear-gradient(to top, #4c66ff, #9900cc);
+    opacity: 0.8;
+}
+
+/* 4. ОСНОВНОЙ КОНТЕНТ (ТЕКСТ) */
+.content-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.text-box {
+    background-color: rgba(255, 255, 255, 0.98); /* Почти непрозрачный белый */
+    padding: 50px;
+    border-radius: 25px;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Глубокая тень */
+    border: 5px solid #ff7e5f; /* Яркая рамка */
+}
+
+/* Анимация "свечения" для основного блока */
+.animated-glow {
+    animation: pulse 3s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 10px #ff7e5f, 0 0 20px #ff7e5f;
+    }
+    to {
+        box-shadow: 0 0 20px #feb47b, 0 0 40px #feb47b;
+    }
+}
+
+/* Стили для текста внутри блока */
+.intro-text {
+    font-size: 1.5em;
+    font-style: italic;
+    color: #ff7e5f;
+    margin-bottom: 20px;
+}
+
+.main-text-area {
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: justify;
+    padding: 0 10px;
+}
+
+.decorative-divider {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, #ff7e5f, transparent);
+    margin: 30px 0;
+}
+
+.signature {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #feb47b;
+    margin-top: 20px;
+    text-align: right;
+}
+
+/* 5. ПОДВАЛ (НИЖНИЙ БАР) */
+.footer-bar {
+    width: 100%;
+    height: 60px; /* Декоративная высота */
+    background-color: #6a11cb; /* Глубокий фиолетовый */
+    position: relative;
+    z-index: 10;
+}
